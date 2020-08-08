@@ -1,0 +1,22 @@
+--DDL(Create, Alter,Drop)
+--1.Create: Create Object ObjectName then Execute
+     --eg1:Database 
+  Create database employee
+  use employee
+
+        --eg2:Table with column
+ create table emptable
+ (
+ empId int primary key,
+ Fname varchar(50),
+ Lname varchar(50),
+ Ade int,
+ Gender char(1)
+ )
+ 
+--2.Alter: To add & Edit columns
+Alter table emptable Add Email varchar(50)
+Alter table emptable Add salary int
+
+--3.Drop: To remove unnessesary part
+Drop table emptable

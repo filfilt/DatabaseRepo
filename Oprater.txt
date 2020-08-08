@@ -1,0 +1,40 @@
+--1.jion
+use SchoolManagmentSystem
+
+select * from Student
+select * from Grade
+
+--inner jion:
+select * from Student s
+inner join Grade g on  s.StudentID=g.StudentID
+
+--left join
+select s.*,g.Grade from Student s left join Grade g on  s.StudentID=g.StudentID
+
+--right join
+select s.*,g.Grade from Student s right join Grade g on  s.StudentID=g.StudentID
+--full outer join
+select s.*,g.Grade from Student s full outer join Grade g on  s.StudentID=g.StudentID
+--cross join
+select s.*,g.Grade from Student s cross join Grade g 
+--2.Union And Union All
+use employee
+select * from A
+select * from B
+
+select * from A union select * from B
+select * from A union all select * from B
+
+--3. in Like,between
+--In
+select * from A where ID in (1,2,4)
+
+use SchoolManagmentSystem
+select * from Student where StudentID in (select StudentID from Grade)
+--between
+select * from A where ID between 1 and 4
+
+--Like
+select * from Student where Fname like 'n%'
+select * from Student where Fname like '%z'
+select * from Student where Fname like '%e%'

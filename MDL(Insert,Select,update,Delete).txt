@@ -1,0 +1,61 @@
+/* *******************************************************************/
+--PART1:DDL(Create, Alter,Drop): works for all Objects
+--1.Create: Create Object ObjectName then Execute
+     --eg1:Database 
+  Create database employee
+  use employee
+
+        --eg2:Table with column
+ create table emptable
+ (
+ empId int primary key,
+ Fname varchar(50),
+ Lname varchar(50),
+ Ade int,
+ Gender char(1)
+ )
+ 
+--2.Alter: To add & Edit columns
+
+Alter table emptable Add Email varchar(50)
+Alter table emptable Add salary int
+
+--3.Drop: To remove unnessesary part
+/***To drop Objects**/
+Drop table emptable
+
+/***To drop Columnss**/
+Alter table emptable Drop column salary
+
+/******************************************/
+--PART2:DML-ISUD(Insert,Select,Update,Delete): All are works on TABLE
+--1. Insert:
+insert into emptable(empId, Fname) values(101, 'nega')
+insert into emptable(empId, Fname, Lname) values(102,'Belew','Kebede')
+insert into emptable(empId, Fname, Lname) values(103,'Belete','Kebede')
+insert into emptable(empId, Fname, Lname) values(104,'Bezabh','zegeye')
+insert into emptable(empId, Fname, Lname) values(105,'zeleke','zegeye')
+insert into emptable(empId, Fname, Lname) values(106,'Alemu','zegeye')
+insert into emptable(empId, Fname, Lname) values(107,'wogayehu','zegeye')
+
+--2.Select:
+--eg1: To select All (* used For slect all columns)
+      /*select-from*/            select* from emptable
+--eg2: To select some elements
+     /*select-from-where*/        select* from emptable where empId = 101
+     /*select-from-where*/        select empId, Fname from emptable where empId = 101
+	 /*select-from-where-or*/     select empId, Fname from emptable where empId = 101 or empId = 103
+	 /*select-where*-btn-and*/    select empId, Fname from emptable where empId between 101 and 105
+
+--3.Update: 
+select * from emptable
+update emptable set Lname ='tafere',Age = 30  where empId = 101
+
+--4.Delete:
+select* from emptable
+delete from emptable where empId = 101
+
+
+
+
+

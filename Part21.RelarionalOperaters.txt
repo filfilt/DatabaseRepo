@@ -1,0 +1,15 @@
+
+--Part20: Relational Operaters (=,>,<,<=,>=,<>)
+--===================
+
+--Eg1:
+Select * from Student Where Age>24
+
+--Eg2:
+Select * from Grade Where Mark>90
+
+Select * from Grade Where Mark<>100
+Select * from Grade Where Mark!=100
+
+
+select * from Grade

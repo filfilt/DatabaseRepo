@@ -1,0 +1,49 @@
+--PART14: Insert ==>insert into table (Columns) Values()
+Use Studentmanagment
+
+   ---Faculty
+insert into Faculty (FacultyId,FacultyName) Values(1,'NaturalScience')
+insert into Faculty (FacultyId,FacultyName) Values(2,'SocialScience')
+insert into Faculty (FacultyId,FacultyName) Values(3,'Techinology')
+insert into Faculty (FacultyId,FacultyName) Values(4,'Medicine')
+   select * from Faculty
+
+  --Department
+
+  insert into Department(DepartmentId,DepartmentName,FacultyId) Values(1,'Mathematics',1)
+  insert into Department(DepartmentId,DepartmentName,FacultyId) Values(2,'Physics',1)
+  insert into Department(DepartmentId,DepartmentName,FacultyId) Values(3,'History',2)
+  insert into Department(DepartmentId,DepartmentName,FacultyId) Values(4,'Electrical',3)
+  insert into Department(DepartmentId,DepartmentName,FacultyId) Values(5,'Veternary',4)
+     select * from Department
+
+  --Student
+  insert into Student (StudentId, FName,LName,Sex,Age,DepartmentId) values(1,'Nega','Tafere','M',26,1)
+  insert into Student (StudentId, FName,LName,Sex,Age,DepartmentId) values(2,'Almaz','Fikade','F',25,2)
+  insert into Student (StudentId, FName,LName,Sex,Age,DepartmentId) values(3,'Bekele','Tafere','M',20,4)
+  insert into Student (StudentId, FName,LName,Sex,Age,DepartmentId) values(4,'Seniyt','Chale','F',23,3)
+    select * from Student
+
+  --Course
+  insert into Course (CoNo,CoTitle,CrHr) Values('Mathe101','Stat',3)
+  insert into Course (CoNo,CoTitle,CrHr) Values('Mathe102','Calculus',2)
+  insert into Course (CoNo,CoTitle,CrHr) Values('Comp101','Introduction',4)
+  insert into Course (CoNo,CoTitle,CrHr) Values('Eng101','Sophomer',3)
+      select * from Course
+
+	  --Grade
+ insert into Grade (StudentId,CoNo,Mark) Values(1,'Mathe101',90)
+ insert into Grade (StudentId,CoNo,Mark) Values(1,'Mathe102',80)
+    
+  insert into Grade (StudentId,CoNo,Mark) Values(2,'Mathe101',70)
+  insert into Grade (StudentId,CoNo,Mark) Values(2,'Mathe101',95)
+
+  insert into Grade (StudentId,CoNo,Mark) Values(3,'Eng101',94)
+  insert into Grade (StudentId,CoNo,Mark) Values(3,'Comp101',60)
+
+  insert into Grade (StudentId,CoNo,Mark) Values(4,'Mathe101',100)
+  insert into Grade (StudentId,CoNo,Mark) Values(4,'Mathe102',75)
+
+	 select * from Grade
+	  
+	  

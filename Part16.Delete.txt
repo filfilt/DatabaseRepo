@@ -1,0 +1,15 @@
+
+--Part16:Delete   /Delete From tableName
+Use Studentmanagment
+
+--Example 1
+  --Add
+insert into Student (StudentId,FName,LName,Sex,Age,DepartmentId) values(5,'Takele','Degu','M',30,3)  
+
+  --Delete
+Delete from Student Where StudentId = 5
+
+--Example 2
+Delete from Student Where StudentId = 1
+ --It gives error because he has Grade  so if we want to delete to delete we need delete Grade first
+select *from Student

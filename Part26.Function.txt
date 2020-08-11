@@ -1,0 +1,23 @@
+
+ --PART26.Function(Scalar,Table Valued, aggregate, System)
+
+  Use Studentmanagment
+
+  --Scalar: Display Single value
+ Create Function fnGetAgeRange
+ (@age int)
+ returns varchar(10)
+
+   begin
+ declare @ageRange varchar(10)
+  if @age>45 set @ageRange= 'Old'
+  else if @age>18 set @ageRange= 'Young'
+ else if @age>13 set @ageRange= 'TeenAge'
+ else if @age>1 set @ageRange= 'kid'
+  return @ageRange
+ end
+ 
+ --check:
+ Select dbo.fnGetAgeRange(40)
+
+

@@ -4,6 +4,7 @@
   Use Studentmanagment
 
   --Scalar: Display Single value
+  --Eg1:
  Create Function fnGetAgeRange
  (@age int)
  returns varchar(10)
@@ -19,5 +20,33 @@
  
  --check:
  Select dbo.fnGetAgeRange(40)
+
+ --Eg2:
+ 
+ --PART27.Function(Scalar,Table Valued, aggregate, System)
+
+  Use Studentmanagment
+
+  --Scalar: Display Single value
+ Create Function fnGetFullName
+ (
+ @FName varchar(50),
+  @LName varchar(50)
+ )
+ returns varchar(100)
+
+   begin
+ declare @FullName varchar(100)
+ set @FullName = @FName +'  '+@LName
+  return @FullName
+ end
+ 
+ --check:
+ Select dbo.fnGetFullName('yirga','Gera')
+
+
+
+
+
 
 

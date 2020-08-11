@@ -1,0 +1,10 @@
+
+--Part15: Update Set Where: /Update tableName Set Column Where Id =X
+Use Studentmanagment
+--Example 1
+Update Grade Set Mark = 95 Where StudentId = 1 and CoNo = 'Mathe101'
+
+--Example 2
+Update Student Set Age = 25 Where StudentId = 1 
+
+   select * from Student

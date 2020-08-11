@@ -49,4 +49,5 @@ Primary key (StudentId,CoNo)
 foreign key (StudentId) references Student(StudentId),
 foreign key (CoNo) references Course(CoNo)
 )
-***********************************************************/
+
+*******************************88****************************/

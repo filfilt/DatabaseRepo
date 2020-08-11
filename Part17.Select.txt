@@ -14,6 +14,6 @@ Use Studentmanagment
   --Example 4
  SELECT * FROM Student  where Sex = 'M'
 
-  --Example 5
+  --Example 5:
  SELECT * FROM Student  where Sex = 'M' and Age <23
  

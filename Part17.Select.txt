@@ -1,0 +1,19 @@
+
+--Part16: Select 
+Use Studentmanagment
+
+--Example 1
+ SELECT * FROM Student
+
+ --Example 2
+ SELECT StudentId,FName,Sex FROM Student
+
+  --Example 3
+ SELECT Distinct Sex FROM Student
+
+  --Example 4
+ SELECT * FROM Student  where Sex = 'M'
+
+  --Example 5
+ SELECT * FROM Student  where Sex = 'M' and Age <23
+ 

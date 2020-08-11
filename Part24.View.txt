@@ -1,0 +1,34 @@
+
+ --PART23.Veiw(To select data, To save data in DB)
+
+  Use Studentmanagment
+
+  --CREATE and Select
+  --Eg1: From All Students
+  Create view VwAllStudent as select * from Student  --from new window --right click on view=>Script =>Create =>New Query
+
+  --Check
+   select * from VwAllStudent
+
+  --Eg2: From Parts:- Create view first and then select
+   Create view VwSlectOnlyFNameLName
+   as
+    select FName,LName from Student
+
+	--Check
+	Select * from VwSlectOnlyFNameLName
+	/*********************************************/
+  --ALTER
+  --right click on view=>Script =>Alter =>New
+   ALTER view VwAllStudent
+  as
+  Select * from Student
+  where Age>24
+  /**********************************************/
+  --DROP
+Drop view VwAllStudent
+
+--Summary: Look the differnce
+
+  Select * from VwAllStudent
+  Select * from VwSlectOnlyFNameLName

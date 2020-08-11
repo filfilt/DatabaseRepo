@@ -1,0 +1,10 @@
+For the problem in use
+
+Exec msdb.dbo.sp_delete_database_backuphistory @database_name = N'Studentmanagment'
+go
+use [master]
+go
+alter database Studentmanagment set single_user with rollback immediate
+go
+drop database Studentmanagment
+go

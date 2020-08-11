@@ -1,0 +1,52 @@
+--Part12: Creating tables under Student managment And Looke Relation
+
+/***********************************************************
+--Alter database Studentmanagment set single_user with rollback immediate;
+Create database Studentmanagment
+
+use Studentmanagment
+
+Create Table Faculty
+(
+FacultyId int primary key,
+FacultyName varchar(50)
+)
+
+
+Create Table Department
+(
+DepartmentId int primary key,
+DepartmentName varchar(50),
+FacultyId int Foreign key (FacultyId) references Faculty(FacultyId)
+)
+
+Create Table Student
+(
+StudentId int primary key,
+FName varchar(50),
+LName varchar(50),
+Sex char(1),
+Age int,
+DOB datetime,
+DepartmentId int Foreign key (DepartmentId) references Department(DepartmentId)
+)
+
+
+Create Table Course
+(
+CoNo varchar(10) primary key,
+CoTitle varchar(50),
+CrHr int
+)
+
+
+Create Table Grade 
+(
+StudentId int,
+CoNo varchar(10),
+Mark int 
+Primary key (StudentId,CoNo)
+foreign key (StudentId) references Student(StudentId),
+foreign key (CoNo) references Course(CoNo)
+)
+***********************************************************/

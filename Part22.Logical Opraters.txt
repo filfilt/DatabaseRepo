@@ -1,0 +1,63 @@
+
+ --PART22.Logical Operaters (All, And, Any, Between, Exists,In, Like,Or,Not,Some)
+
+  Use Studentmanagment
+
+  --All
+ Select * from Student
+ Where StudentId >all
+ (Select StudentId from Grade)
+
+ --Any
+  Select * from Student
+ Where StudentId >any
+ (Select StudentId from Grade)
+
+ --Some
+  Select * from Student
+ Where StudentId >=some
+ (Select StudentId from Grade)
+
+ --Between: To Get Values Between Range
+  Select * from Student
+ Where Age between 25 and 30
+
+ --In: To Get Spesific Values 
+  Select * from Student
+ Where Age in (20,23)
+
+ --Exists: To check the value is exist or not
+  Select * from Course
+ Where Exists
+ (Select CoNo from Grade)
+
+ --Like: Using wild card (%) to know the Starting , Ending or containing letter
+  --Eg1: To know Starting letter
+ Select * from Student
+ Where FName like 'A%'
+
+  --Eg2: To know ending letter
+ Select * from Student
+ Where FName like '%A'
+
+  --Eg3: To Check the letter is exist in the given name 
+ Select * from Student
+ Where FName like '%A%'
+
+ --Not (!=)
+  --Eg1: 
+ Select * from Student
+ Where StudentId !=1
+
+ --Eg2: 
+ Select * from Student
+ Where StudentId not in (2,4)
+
+ --Or
+ --Eg1: 
+ Select * from Student
+ Where StudentId in (3,4)
+ or FName like 'A%'
+   
+
+ 

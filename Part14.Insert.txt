@@ -1,4 +1,4 @@
---PART14: Insert ==>insert into table (Columns) Values()
+--PART14: Insert into ==>insert into table (Columns) Values()
 Use Studentmanagment
 
    ---Faculty

@@ -1,0 +1,10 @@
+Key Words:
+1.Create: Create ObjectType objectName
+	  eg1: Create database Studentmanagment
+	   eg2: Create table Student(columns)
+2.Alter: Alter Object Name of Object Type
+ 	eg1: Alter Table Student
+	     Add email varchar(50)
+3.Drop: Drop Object ObjectName
+ 	eg1: Drop Table Student
+	     

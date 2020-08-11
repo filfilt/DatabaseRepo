@@ -1,0 +1,48 @@
+
+--Part16: Join(Inner,Left.Right,Full outer) 
+Use Studentmanagment
+ 
+ --First Create Two Tables and add rows
+CREATE Table A
+(Id int)
+insert into A (Id) values(1),(2),(3),(4)
+
+CREATE Table B
+(Id int)
+insert into B (Id) values(3),(4),(5),(6),(7)
+
+--Display all values of Two tables
+Select * From A
+Select * From B
+
+ --Inner join
+Select * From A inner join B on A.Id = B.Id
+
+ --Left join
+Select * From A left join B on A.Id = B.Id
+
+ --Rigt join
+Select * From A right join B on A.Id = B.Id
+
+ --Full outer join
+Select * From A full outer join B on A.Id = B.Id
+
+--Cross join
+Select * From A Cross join B 
+
+/***********************************************************/
+ --By using Studeng and Grade Tables
+ select * from Student
+ select * from Grade
+
+  --inner
+Select * From Student inner join Grade on Student.StudentId = Grade.StudentId
+            --Or
+Select * From Student s inner join Grade g on s.StudentId = g.StudentId
+
+  -- left
+  Select * From Student s left join Grade g on s.StudentId = g.StudentId
+  -- right
+  Select * From Student s right join Grade g on s.StudentId = g.StudentId
+   -- Full outer
+  Select * From Student s full outer join Grade g on s.StudentId = g.StudentId

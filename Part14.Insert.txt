@@ -8,7 +8,7 @@ insert into Faculty (FacultyId,FacultyName) Values(3,'Techinology')
 insert into Faculty (FacultyId,FacultyName) Values(4,'Medicine')
    select * from Faculty
 
-  --Department
+  --Department:
 
   insert into Department(DepartmentId,DepartmentName,FacultyId) Values(1,'Mathematics',1)
   insert into Department(DepartmentId,DepartmentName,FacultyId) Values(2,'Physics',1)

@@ -1,0 +1,20 @@
+
+--Part20: Operaters
+--===================
+
+--Arthimetic (+,-,*,/,%)
+	--Eg1:
+Select 11+6 --Sum
+Select 11-6 --Minus
+Select 11*6 --Product
+Select 11/6 --divi
+Select 11%6 --modulo
+
+--Eg2:
+select FName +' '+ LName from Student
+
+--Eg3:
+Select StudentId, CoNo, Mark+5 from Grade
+
+select * from Grade
+

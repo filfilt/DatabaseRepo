@@ -12,4 +12,4 @@ Delete from Student Where StudentId = 5
 --Example 2
 Delete from Student Where StudentId = 1
  --It gives error because he has Grade  so if we want to delete to delete we need delete Grade first
-select *from Student
+select *from Student        --To see all

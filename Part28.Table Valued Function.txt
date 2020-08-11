@@ -1,0 +1,32 @@
+
+ --PART28.Function(Scalar,Table Valued, aggregate, System)
+
+  Use Studentmanagment
+
+  --Table valued:
+ Create Function fnGetStudentBySex
+ (
+ @Sex char(1)
+   )
+ returns @studentList table
+ (
+ StudentId int,
+ FName varchar(50),
+ LName varchar(50),
+ Sex char(1),
+ Age int
+  )
+
+   begin
+ insert into @studentList (StudentId,FName,LName,Sex,Age)
+ select StudentId,FName,LName,Sex,Age from Student
+ where Sex = @Sex
+  return 
+ end
+ 
+ --check:
+ Select * From dbo.fnGetStudentBySex('F')
+
+
+
+

@@ -7,4 +7,4 @@ Update Grade Set Mark = 95 Where StudentId = 1 and CoNo = 'Mathe101'
 --Example 2
 Update Student Set Age = 25 Where StudentId = 1 
 
-   select * from Student
+   select * from Student   --to see all lists

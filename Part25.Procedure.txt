@@ -1,0 +1,59 @@
+
+ --PART25.Procedure(Select,Update,delete)
+
+  Use Studentmanagment
+  --Eg1: To display by procedure Name
+  Create procedure spAllStudent
+  as
+  select * from Student
+
+  -- Check by calling
+  spAllStudent
+--Or
+  Exec spAllStudent
+
+   --Eg2:To display by procedure Id
+   Create procedure spGetStudentById
+   @StudentId int
+   as 
+   begin
+   select * from Student 
+   where StudentId = @StudentId
+   end
+   
+   --Check
+   spGetStudentById 2
+
+    --Eg3:Alter :- To display by procedure Id and Name
+   Alter procedure spGetStudentById
+   @StudentId int,
+   @FName varchar(50)
+   as 
+   begin
+   select * from Student 
+   where StudentId = @StudentId and FName = @FName
+   end
+   
+   --Check
+   spGetStudentById 1, 'nega'
+
+   --Select
+
+   Create procedure spInsertStudents
+   @StudentId int,
+   @FName varchar(50),
+   @LName varchar(50),
+   @Sex varchar(50),
+   @Age int,
+   @DepartmentID int
+
+   AS
+   insert into Student
+   (StudentId,FName,LName,Sex,Age,DepartmentId)
+    values(@StudentId,@FName,@LName,@Sex,@Age,@DepartmentID)
+
+  --Insert Using
+  spInsertStudents 6, 'Molla', 'Gebru','M',26,4
+  --Check Using
+  select *from Student
+

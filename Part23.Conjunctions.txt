@@ -1,0 +1,17 @@
+
+ --PART23.Conjuction(Union , Union All, Like , In , Between)
+
+  Use Studentmanagment
+
+  Select * from A
+  Select * from B
+  
+  --Union
+  --Eg1
+  Select * from A Union Select * from B
+  --Eg2:
+  Select * from A Union Select * from B  where Id in (1,3,4)
+
+  --Union All
+  Select * from A Union All Select * from B
+

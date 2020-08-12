@@ -1,0 +1,30 @@
+
+--Part30: Function-Date
+/***********************/
+select dateAdd(day,10,getdate())
+Select getDate()
+
+CONVERT(datatype,expression,style)
+
+--run
+Select Convert(Varchar(19),GetDate())
+
+Select Convert(Varchar(10),GetDate(),10)
+
+Select Convert(Varchar(10),GetDate(),110)
+datediff()
+
+
+datediff(datePart,startDate,endDate)
+--run
+select datediff(hour,2015-11-16,2015-11-11)
+
+
+dateAdd(datePart,number,datecolumnname)
+
+select dateAdd(day,10,getdate())
+select year(getDate())
+select month(getDate())
+select day(getDate())
+select convert(char(3),getDate(),0)
+

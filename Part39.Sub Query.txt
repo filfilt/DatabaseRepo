@@ -1,0 +1,22 @@
+
+--Part39: SubQuery
+  	
+/***********************/
+--Eg1:
+
+Select * From Student
+Where StudentId in (Select StudentId From Grade)
+
+--Eg2:
+
+Select FName,LName From (Select * From Student) s
+
+--Eg3:
+
+Select FName,LName,Sex From (Select * From Student) s Where Sex = 'F'
+
+--Eg4:
+
+Select * From Student s inner join (Select * From Grade) g on s.StudentId = g.StudentId
+
+--Note: Look more about Sub query from  https://mode.com/sql-tutorial/sql-sub-queries/

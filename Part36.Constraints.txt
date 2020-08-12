@@ -1,0 +1,22 @@
+
+--Part36:Constraints (Default, Not Null,Unique, Primary key, Foreign key,Check )
+  	
+/***********************/
+
+Use Studentmanagment
+
+Create table person
+(
+Id int primary key,
+LName varchar(255) Not Null,
+FName varchar(255),
+Age int check(Age>=18),
+Description Varchar(50) unique
+);
+
+--Primary key: Cann't Nor be repeate ,Cann't Nor be Null
+--LName: Cann't Nor be Null
+--Age: Cann't Nor be Less than 18
+--Description: It allows Null but Cann't Nor be repeate more than one
+
+insert into person(Id,LName,FName,Age,Description) Values(Null,Null,'Nega',20,Null)

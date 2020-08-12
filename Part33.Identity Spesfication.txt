@@ -1,0 +1,25 @@
+
+--Part33: Identity Spesfication (Seed and Increament)
+	
+/***********************/
+
+Use Studentmanagment
+ Create table employee
+ (
+ Id int identity(1,1),
+ Name varchar(50)
+ )
+ --Eg1:
+ insert into employee values ('Nega')
+ insert into employee values ('Abera')
+
+ select * from employee
+
+ --problem whem we run it after delete some rows 
+ delete from employee
+ where Id = 2
+
+  --Eg2: to know the last ideltity
+ insert into employee values ('Adisu')
+ select @@IDENTITY
+ 

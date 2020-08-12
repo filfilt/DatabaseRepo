@@ -1,0 +1,19 @@
+
+--Part38:Having
+  	
+/***********************/
+--Eg1:
+
+Select DepartmentId,Sex,TotalStudent=count(*) from Student
+Group by DepartmentId, Sex
+having Sex = 'F'
+Order by DepartmentId
+
+--Eg2:
+
+Select DepartmentId,Sex,TotalStudent=count(*) from Student
+Group by DepartmentId, Sex
+having count(*)>=3 
+and Sex = 'M'
+Order by DepartmentId
+

@@ -1,0 +1,25 @@
+
+--Part37:Group By
+  	
+/***********************/
+--Eg1:
+
+Select count(*),DepartmentId from Student
+Group by DepartmentId
+
+--Eg2:
+
+Select DepartmentId,TotalStudent=count(*) from Student
+Group by DepartmentId
+
+--Eg3:
+
+Select DepartmentId,Sex,TotalStudent=count(*) from Student
+Group by DepartmentId, Sex
+
+--Eg4:
+
+Select DepartmentId,Sex,TotalStudent=count(*) from Student
+Group by DepartmentId, Sex
+Order by DepartmentId
+

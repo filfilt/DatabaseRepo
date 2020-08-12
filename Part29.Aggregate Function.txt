@@ -1,0 +1,30 @@
+
+ --PART29.aggregate Function(Avg(),Count(),Max(),Min(),Sum(),Upper(),Lower(),Len(),Round())
+
+  Use Studentmanagment
+SELECT * FROM Grade
+--Avg
+Select AvgMark = Avg(Mark) From Grade
+
+--Count1
+Select NoOfStudents = Count(*) From Student
+
+--Count1
+Select NoOfStudents = Count(*),Sex From Student
+Group by Sex
+--Max
+Select MaxMark = Max(Mark) From Grade
+--Min
+Select MinMark = Min(Mark) From Grade
+--Sum
+Select SumMark = Sum(Mark) From Grade
+--Upper
+Select UpperCase=Upper(FName) From Student
+--Lower
+Select LowerCase=Lower(FName) From Student
+--Len
+Select FName,Len(FName) From Student
+--Round
+Select Round(12.66,0)
+Select Round(12.66,2)
+Select Round(12.66,3)

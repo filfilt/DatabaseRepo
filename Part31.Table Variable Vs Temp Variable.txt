@@ -1,0 +1,47 @@
+
+--Part31: Table Variable Vs Temp table Vs CTE
+/***********************/
+
+--Table Variable: It Allows Multiple run
+Use Studentmanagment
+
+declare @mytable table
+(
+StudentId int,
+FName varchar(50)
+)
+
+insert into @mytable 
+select StudentId,FName From Student
+
+Select * From @mytable
+
+--Temporary Table: It Allows One time run
+
+Create table #mytable
+(
+StudentId int,
+FName varchar(50)
+)
+insert into #mytable 
+select StudentId,FName From Student
+
+Select * From #mytable
+--so It need Drop
+Drop table #mytable
+
+--CTE: It Allows One time Select
+--Eg1:
+with myCTE
+as
+(select * From Student)
+Select * From myCTE
+
+ --but: It gives error for more that one selection
+Select * From myCTE
+
+--Eg2:
+with myCTE
+as
+(select StudentId,FName From Student)
+Select * From myCTE

@@ -1,0 +1,32 @@
+
+--Part40: Order By
+  	
+/***********************/
+--Assending Order
+--Eg1:
+
+Select * From Student
+Order By FName
+
+--Eg2:
+
+Update Student Set FName = 'Abebe',LName = 'Kebede' Where StudentId = 8
+Select * From Student
+Order By FName
+
+--Eg3:
+
+Update Student Set FName = 'Abebe',LName = 'Ayele' Where StudentId = 9
+Select * From Student
+Order By FName
+
+--Eg4:
+
+Update Student Set FName = 'Abebe',LName = 'Ayele' Where StudentId = 9
+Select * From Student
+Order By FName,LName
+
+--Dessending Order
+
+Select * From Student
+Order By FName desc

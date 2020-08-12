@@ -1,0 +1,30 @@
+
+--Part42:Managing Transactin (Rollback)
+  	
+/***********************/
+ Create table account
+ (
+ Id int,
+ balance int
+ )
+
+ insert into account values (1,5000)
+ insert into account values (2,6000)
+
+ Select * From account
+
+ --On the processs
+  
+  begin tran
+  Update account set balance = 4500 where Id = 1
+
+  --Fail
+    begin tran
+     Update account set balance = 4500 where Id = 1
+    rollback
+
+	--If it is work
+	--Fail
+    begin tran
+     Update account set balance = 4500 where Id = 1
+    Commit

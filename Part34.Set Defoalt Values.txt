@@ -1,0 +1,26 @@
+
+--Part34:Set Defoalt Values(Columns, Parameters)
+  --Create the following table & run it
+  --Go to Design and make "M" Next to Defoalt Value or binding
+	
+/***********************/
+
+Use Studentmanagment
+
+ Create table myDefoaltTable
+ (
+ Id int,
+ Name varchar(50),
+ Sex Char(1)
+ )
+
+ insert into myDefoaltTable(Id,Name) values (1,'Nega')
+ insert into myDefoaltTable(Id,Name) values (2,'Almaz')
+ insert into myDefoaltTable(Id,Name) values (3,'Bewuket')
+
+ select * From myDefoaltTable
+
+
+
+
+

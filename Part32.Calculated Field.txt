@@ -1,0 +1,24 @@
+
+--Part32: Calculated Field
+	--Go to Studentmanagment
+	-- Create table With column(Id,Name,Qty,UnitPrice,TotalPrice)
+	--Go to Computed Column Spesfication =>Next to Formula write Qty*UnitPrice
+	--Add The First 4 Rows then the next column is calculated by it self
+/***********************/
+
+Use Studentmanagment
+
+Create table CalField
+(
+Id int,
+Name varchar(50),
+Qty int,
+UnitPrice float,
+TotalPrice float
+)
+
+insert into CalField
+values(2,'babanana',3,2.75)
+
+select * From CalField
+

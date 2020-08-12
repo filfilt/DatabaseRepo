@@ -1,0 +1,27 @@
+
+--Part41: Top and dis
+  	
+/***********************/
+--TOP
+--Eg1:
+
+Select Top 2 * From Student
+
+--Eg2:
+
+Select Top 2 * From Student
+Order by Fname
+
+--distinct
+
+--Eg1:
+
+Select distinct StudentId From Grade
+
+--Eg2:
+
+Select distinct Sex From Student
+
+--Eg3:
+
+Select distinct DepartmentId From Student
